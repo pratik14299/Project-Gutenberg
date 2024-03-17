@@ -56,9 +56,7 @@ class BooksBookSerializer(ModelSerializer):
     language = SerializerMethodField() 
     authors = SerializerMethodField() 
     subjects = SerializerMethodField() 
-    bookshelves = SerializerMethodField()
-    # bookshelves = BooksBookshelfSerializer(source='bookshelves_set',many=True, read_only=True)
-    # subjects = BooksSubjectSerializer(source='BooksSubject_set',many=True, read_only=True)
+    bookshelves = SerializerMethodField() 
     formats = BooksFormatSerializer(source='booksformat_set', many=True,read_only=True)
 
 
